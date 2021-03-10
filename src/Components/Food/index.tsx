@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Comidas } from '../../Types/FoodList';
 
 const Foods = () => {
@@ -55,7 +55,7 @@ const Foods = () => {
                     comidas.map((item: Comidas) => (
 
                         <div className="food-item" key={item.idMeal}>
-                            <img src={item.strMealThumb} />
+                            <img src={item.strMealThumb} alt={item.strMeal} />
                             <p>{item.strMeal}</p>
                         </div>
                     ))
